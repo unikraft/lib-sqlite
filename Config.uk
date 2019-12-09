@@ -1,0 +1,7 @@
+config LIBSQLITE
+    bool "SQLite"
+    default y
+    select LIBUKMMAP
+    select UKSYSINFO
+    select LIBNEWLIBC
+    select LIBPTHREAD_EMBEDDED
