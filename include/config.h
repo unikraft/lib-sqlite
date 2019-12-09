@@ -41,7 +41,7 @@
 #define HAVE_MALLOC_H 1
 
 /* Define to 1 if you have the `malloc_usable_size' function. */
-#define HAVE_MALLOC_USABLE_SIZE 1
+/* #define HAVE_MALLOC_USABLE_SIZE 1 */
 
 /* Define to 1 if you have the <memory.h> header file. */
 #define HAVE_MEMORY_H 1
@@ -50,13 +50,13 @@
 #define HAVE_PREAD 1
 
 /* Define to 1 if you have the pread64() function. */
-#define HAVE_PREAD64 1
+/* #define HAVE_PREAD64 1 */
 
 /* Define to 1 if you have the pwrite() function. */
 #define HAVE_PWRITE 1
 
 /* Define to 1 if you have the pwrite64() function. */
-#define HAVE_PWRITE64 1
+/* #define HAVE_PWRITE64 1 */
 
 /* Define to 1 if you have the <stdint.h> header file. */
 #define HAVE_STDINT_H 1
