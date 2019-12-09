@@ -73,7 +73,14 @@ LIBSQLITE_CFLAGS-y += $(LIBSQLITE_FLAGS)
 LIBSQLITE_CFLAGS-y += $(LIBSQLITE_SUPPRESS_FLAGS)
 
 ################################################################################
+# Glue code
+################################################################################
+LIBSQLITE_SRCS-$(CONFIG_LIBSQLITE_MAIN_FUNCTION) += $(LIBSQLITE_BASE)/main.c|unikraft
+
+################################################################################
 # SQLite sources
 ################################################################################
+LIBSQLITE_SHELL_FLAGS-y += -Dmain=sqlite_main -Dwmain=sqlite_main
+
 LIBSQLITE_SRCS-y += $(LIBSQLITE_SRC)/shell.c
 LIBSQLITE_SRCS-y += $(LIBSQLITE_SRC)/sqlite3.c
