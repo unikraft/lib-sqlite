@@ -66,11 +66,13 @@ LIBSQLITE_CINCLUDES += -I$(LIBSQLITE_SRC)
 LIBSQLITE_FLAGS = -D_HAVE_SQLITE_CONFIG_H -DSQLITE_OMIT_LOAD_EXTENSION
 
 # Suppress some warnings to make the build process look neater
-LIBSQLITE_SUPPRESS_FLAGS += -Wno-unused-parameter -Wno-unused-variable		\
--Wno-cast-function-type -Wno-char-subscripts -Wimplicit-fallthrough=0		\
+LIBSQLITE_SUPPRESS_FLAGS-y += -Wno-unused-parameter -Wno-unused-variable		\
+-Wno-cast-function-type -Wno-char-subscripts
+
+LIBSQLITE_SUPPRESS_FLAGS-$(call gcc_version_ge,7,0) +=-Wimplicit-fallthrough=0		\
 
 LIBSQLITE_CFLAGS-y += $(LIBSQLITE_FLAGS)
-LIBSQLITE_CFLAGS-y += $(LIBSQLITE_SUPPRESS_FLAGS)
+LIBSQLITE_CFLAGS-y += $(LIBSQLITE_SUPPRESS_FLAGS-y)
 
 ################################################################################
 # Glue code
