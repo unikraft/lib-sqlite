@@ -35,7 +35,7 @@
 ################################################################################
 # App registration
 ################################################################################
-$(eval $(call addlib,libsqlite))
+$(eval $(call addlib,libsqlite,$(CONFIG_LIBSQLITE)))
 
 ################################################################################
 # Sources
@@ -56,7 +56,8 @@ LIBSQLITE_SRC = $(LIBSQLITE_ORIGIN)/$(LIBSQLITE_BASENAME)
 # Library includes
 ################################################################################
 LIBSQLITE_CINCLUDES-y += -I$(LIBSQLITE_BASE)/include
-LIBSQLITE_CINCLUDES += -I$(LIBSQLITE_SRC)
+CINCLUDES-$(CONFIG_LIBSQLITE) += -I$(LIBSQLITE_SRC)
+CXXINCLUDES-$(CONFIG_LIBSQLITE) += -I$(LIBSQLITE_SRC)
 
 ################################################################################
 # Global flags
