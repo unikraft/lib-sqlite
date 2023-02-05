@@ -7,7 +7,18 @@ menuconfig LIBSQLITE
     select LIBPTHREAD_EMBEDDED
 
 if LIBSQLITE
-config LIBSQLITE_MAIN_FUNCTION
-    bool "Provide main function"
-    default y
+    config LIBSQLITE_MAIN_FUNCTION
+        bool "Provide main function"
+        default y
+    config LIBSQLITE_TEST
+        bool "Enable sqlite tcl tests"
+        select LIBUKTEST
+        default n
+        select LIBSQLITE_TEST_MINIMAL
+        help
+
+    config LIBSQLITE_TEST_MINIMAL
+        bool
+        default n
+
 endif

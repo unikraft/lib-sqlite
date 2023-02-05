@@ -85,3 +85,11 @@ LIBSQLITE_SHELL_FLAGS-y += -Dmain=sqlite_main -Dwmain=sqlite_main
 
 LIBSQLITE_SRCS-y += $(LIBSQLITE_SRC)/shell.c
 LIBSQLITE_SRCS-y += $(LIBSQLITE_SRC)/sqlite3.c
+
+
+################################################################################
+# Tests
+################################################################################
+ifneq ($(filter y, $(LIBSQLITE_TEST_MINIMAL) $(CONFIG_LIBUKTEST_ALL)),)
+LIBSQLITE_SRCS-y += $(LIBSQLITE_BASE)/tests/test_minimal.c
+endif
