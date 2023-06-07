@@ -9,5 +9,5 @@ menuconfig LIBSQLITE
 if LIBSQLITE
 config LIBSQLITE_MAIN_FUNCTION
     bool "Provide main function"
-    default y
+    default n
 endif
