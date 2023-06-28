@@ -1,9 +1,9 @@
 menuconfig LIBSQLITE
     bool "SQLite"
-    default y
-    select LIBUKMMAP
+    default n
+    imply LIBUKMMAP
     select LIBPOSIX_SYSINFO
-    select LIBNEWLIBC
+    depends on HAVE_LIBC
     select LIBPTHREAD_EMBEDDED
 
 if LIBSQLITE
