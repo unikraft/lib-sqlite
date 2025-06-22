@@ -1,10 +1,17 @@
+imply LIBUKMMAP
+select LIBPOSIX_SYSINFO
+depends on HAVE_LIBC
+select LIBPTHREAD_EMBEDDED
+
 menuconfig LIBSQLITE
-    bool "SQLite"
+    bool "libsqlite"
     default n
-    imply LIBUKMMAP
-    select LIBPOSIX_SYSINFO
-    depends on HAVE_LIBC
-    select LIBPTHREAD_EMBEDDED
+    help
+      Enable the SQLite library
+
+config LIBSQLITE_ENABLE_SHELL
+    bool "Enable SQLite shell (CLI) interface"
+    default n
 
 if LIBSQLITE
 config LIBSQLITE_MAIN_FUNCTION
