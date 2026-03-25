@@ -40,7 +40,7 @@ $(eval $(call addlib_s,libsqlite,$(CONFIG_LIBSQLITE)))
 ################################################################################
 # Sources
 ################################################################################
-LIBSQLITE_VERSION = 3400100
+LIBSQLITE_VERSION = 3510300
 LIBSQLITE_BASENAME = sqlite-amalgamation-$(LIBSQLITE_VERSION)
 LIBSQLITE_URL = https://www.sqlite.org/2022/$(LIBSQLITE_BASENAME).zip
 LIBSQLITE_PATCHDIR = $(LIBSQLITE_BASE)/patches

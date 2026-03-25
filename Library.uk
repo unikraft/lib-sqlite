@@ -3,4 +3,4 @@ description := "A C-language library that implements a small, fast, self-contain
 gitrepo     := "https://github.com/sqlite/sqlite.git"
 homepage    := "https://www.sqlite.org/"
 license     := "blessing"
-version     := 3400100 sha256:49112cc7328392aa4e3e5dae0b2f6736d0153430143d21f69327788ff4efe734 https://www.sqlite.org/2022/sqlite-amalgamation-3400100.zip
+version     := 3510300 SHA256:581215771b32ea4c4062e6fb9842c4aa43d0a7fb2b6670ff6fa4ebb807781204 https://www.sqlite.org/2026/sqlite-amalgamation-3510300.zip
